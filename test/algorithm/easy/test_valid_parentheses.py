@@ -19,6 +19,29 @@ class TestValidParentheses(unittest.TestCase):
         res = Solution().isValid(s)
         assert res is False
 
+    def test_case_four(self):
+        s = "){"
+        res = Solution().isValid(s)
+        assert res is False
+
+
+    def test_case_five(self):
+        s = "(){}}{"
+        res = Solution().isValid(s)
+        assert res is False
+
+    def test_case_six(self):
+        s = "({{{{}}}))"
+        res = Solution().isValid(s)
+        assert res is False
+
+
+    def test_case_seven(self):
+        s = "([]){"
+        res = Solution().isValid(s)
+        assert res is False
+
+
 
 if __name__ == '__main__':
     unittest.main()
